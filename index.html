@@ -1,13 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ElitePips</title>
-<meta name="description" content="Answer one quick question to join free Forex signals on Telegram. Limited access available!"/>
-<meta name="theme-color" content="#001022">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wolf Academy™️</title>
 
-<!-- Meta Pixel -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,180 +15,422 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1593721464926438');
+fbq('init', '1402641208602757');
 fbq('track', 'PageView');
 </script>
-
-<style>
-:root{
-  --accent1:#ff7a00;
-  --accent2:#ff4d00;
-  --text:#e6eefb;
-  --muted:#bfcfe6;
-  --card-bg:rgba(6,8,15,0.9);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  background:linear-gradient(160deg,#001022,#002a4a);
-  display:flex;align-items:center;justify-content:center;
-  padding:18px;color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-}
-.container{
-  width:100%;max-width:640px;
-  background:var(--card-bg);
-  border-radius:14px;padding:20px;
-  box-shadow:0 24px 60px rgba(0,10,30,0.6);
-  position:relative;overflow:hidden;color:var(--text);
-}
-.progressWrap{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.progress{flex:1;height:9px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
-.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));width:0;transition:width .45s ease}
-.progressNum{min-width:44px;text-align:right;color:var(--muted);font-weight:700;font-size:13px}
-.question{animation:fadeIn .32s ease;text-align:center;margin-bottom:14px}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.hype{
-  display:inline-block;padding:10px 14px;border-radius:12px;font-weight:900;font-size:20px;
-  background:linear-gradient(90deg,#ffd9b3,#ffb48a);color:#1b0520;
-  box-shadow:0 8px 30px rgba(255,120,0,0.12);
-}
-.hype.small{font-size:16px;padding:8px 12px}
-.pulse{animation:pulse 1.6s infinite}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
-.options{display:flex;flex-direction:column;gap:10px;margin-top:12px}
-.option{
-  background:rgba(255,255,255,0.02);
-  border-radius:12px;padding:12px 14px;cursor:pointer;font-weight:800;text-align:center;
-  border:1px solid rgba(255,255,255,0.04);
-  box-shadow:0 8px 30px rgba(0,0,0,0.5);
-  transition:transform .16s,box-shadow .16s,background .16s;
-}
-.option:hover{transform:translateY(-6px);box-shadow:0 18px 46px rgba(255,90,0,0.12);background:linear-gradient(90deg,rgba(255,90,0,0.08),rgba(255,150,0,0.06));}
-.option.selected{background:linear-gradient(90deg,rgba(255,120,0,0.18),rgba(255,60,0,0.12));color:#fff;transform:translateY(-8px)}
-.thankyou{text-align:center;padding:6px}
-.thank-h{font-size:20px;margin:6px 0;font-weight:900}
-.thank-sub{color:var(--muted);margin-bottom:12px}
-.join-btn{
-  display:inline-block;position:relative;overflow:hidden;
-  background:linear-gradient(90deg,#ff7a00,#ff4d00);
-  color:#fff;padding:12px 18px;border-radius:12px;font-weight:900;text-decoration:none;
-  box-shadow:0 14px 40px rgba(255,90,0,0.18);
-}
-.join-btn::after{content:'';position:absolute;left:-50%;top:0;width:40%;height:100%;background:linear-gradient(120deg,rgba(255,255,255,0)0%,rgba(255,255,255,0.14)50%,rgba(255,255,255,0)100%);transform:skewX(-20deg);filter:blur(6px);animation:shine 3.4s linear infinite}
-@keyframes shine{0%{left:-60%}100%{left:120%}}
-.fomo{background:linear-gradient(90deg,#ffe6d6,#ffd0b3);color:#2b0a00;padding:8px 12px;border-radius:10px;font-weight:800;display:inline-block;margin:10px 0;font-size:13px}
-.small{font-size:13px;color:var(--muted);margin-top:8px}
-.row{display:flex;gap:10px;justify-content:center;margin-top:12px}
-.btn-ghost{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);font-weight:700;text-decoration:none;cursor:pointer}
-@media (max-width:520px){.container{padding:14px}.hype{font-size:18px}}
-</style>
-</head>
-
-<body>
-<main class="container" id="card">
-  <div class="progressWrap">
-    <div class="progress"><i id="bar"></i></div>
-    <div class="progressNum" id="progNum">0%</div>
-  </div>
-  <div id="q-box"></div>
-</main>
-
-<script>
-/* Deep-link setup */
-const telegramAppLink = "tg://join?invite=ZrjDtoQ9Tgw3ZWQ1";
-const telegramWebLink = "https://t.me/+ZrjDtoQ9Tgw3ZWQ1";
-
-let answered=false;
-const qBox=document.getElementById('q-box'),
-      bar=document.getElementById('bar'),
-      progNum=document.getElementById('progNum');
-
-function renderSingleQuestion(){
-  qBox.innerHTML = `
-    <div class="question">
-      <div class="hype pulse">🔥 LIVE Forex signals — traders are booking entries now!</div>
-      <div style="height:10px"></div>
-      <div class="options">
-        <div class="option" data-val="yes">Yes — show me live setups</div>
-        <div class="option" data-val="no">No — not right now</div>
-      </div>
-      <div class="small">Tap one — it only takes a second. Limited access for serious traders only.</div>
-    </div>
-  `;
-  updateProgress(0);
-  document.querySelectorAll('.option').forEach(o=>o.addEventListener('click',onChooseSingle));
-}
-
-function updateProgress(pct){
-  bar.style.width = pct + "%";
-  progNum.textContent = pct + "%";
-}
-
-function onChooseSingle(ev){
-  if(answered) return;
-  answered=true;
-  const el = ev.currentTarget;
-  const val = el.getAttribute('data-val');
-  document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));
-  el.classList.add('selected');
-  setTimeout(()=>{ updateProgress(100); showResultFor(val); },220);
-}
-
-/* Deep redirect logic */
-function deepRedirect(){
-  const now = Date.now();
-  window.location.href = telegramAppLink;
-  setTimeout(()=>{ 
-    if(Date.now() - now < 2000){
-      window.location.href = telegramWebLink;
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1402641208602757&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
-  },900);
-}
 
-/* Thank-you page with strong FOMO + forex theme text */
-function showResultFor(val){
-  if(val === 'yes'){
-    qBox.innerHTML = `
-      <div class="thankyou">
-        <div class="hype small">You're seconds away from real market updates 🚀</div>
-        <div class="thank-sub">Our experts share live Forex setups, entry zones & community discussions every day.</div>
-        <div><span class="fomo">⚡ Don’t miss the next breakout — join the signal group now!</span></div>
-        <div class="fomo">📊 Real-time trade setups, risk-managed analysis & daily learning sessions.</div>
-        <div class="fomo">⏰ New signal dropping soon — tap below before access closes.</div>
-        <div class="row" style="margin-top:16px">
-          <a id="joinBtn" class="join-btn" href="#" target="_blank" rel="noopener">Join Free Signals →</a>
-        </div>
-        <div class="count" style="margin-top:14px">Auto-redirecting in <span id="count">7</span>s...</div>
-      </div>
-    `;
-    let t=7; const count=document.getElementById('count');
-    const timer=setInterval(()=>{
-      t--; if(count) count.textContent = t;
-      if(t<=0){ clearInterval(timer); deepRedirect(); }
-    },1000);
-    setTimeout(()=>{ document.getElementById('joinBtn').addEventListener('click', deepRedirect); },50);
-  } else {
-    qBox.innerHTML = `
-      <div class="thankyou">
-        <div class="hype small">No worries — take your time 🙂</div>
-        <div class="thank-sub">You can always explore our free community & educational content later.</div>
-        <div class="row">
-          <button id="backBtn" class="btn-ghost">Back</button>
-          <a id="learnBtn" class="join-btn" href="#" target="_blank" rel="noopener">Explore Community →</a>
-        </div>
-        <div class="small">Stay updated — more trading insights await you.</div>
-      </div>
-    `;
-    setTimeout(()=>{
-      document.getElementById('backBtn').addEventListener('click', ()=>{ answered=false; renderSingleQuestion(); });
-      document.getElementById('learnBtn').addEventListener('click', deepRedirect);
-    },50);
-  }
-}
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      background-color: #03080c;
+      position: relative;
+      overflow-x: hidden;
+      padding: 20px 0;
+    }
 
-// initial render
-renderSingleQuestion();
-</script>
+    /* Animated Background Container */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Grid Line Movement */
+    .grid-overlay {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image: 
+        linear-gradient(rgba(0, 255, 136, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(40px); }
+    }
+
+    /* Wave Line Animation */
+    .chart-wave {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .wave-path {
+      fill: none;
+      stroke: #ff0055;
+      stroke-width: 3;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 4s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes dash {
+      from { stroke-dashoffset: 1000; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 2px #ff0055); }
+      to { filter: drop-shadow(0 0 8px #ff0055); }
+    }
+
+    /* Pulsing Green Candlesticks */
+    .candlestick {
+      animation: pulseBar 1.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseBar {
+      0% { opacity: 0.3; transform: scaleY(0.95); }
+      100% { opacity: 0.7; transform: scaleY(1.05); }
+    }
+
+    /* Layer Container Styling */
+    .container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 410px;
+      padding: 24px 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(3, 8, 12, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      margin-bottom: 15px;
+    }
+
+    .main-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .logo-container {
+      margin-bottom: 12px;
+    }
+
+    .logo-circle {
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      border: 3.5px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000000;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+      overflow: hidden;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .timer {
+      font-size: 90px;
+      font-weight: 900;
+      color: #00e611;
+      line-height: 1;
+      margin: 8px 0 22px 0;
+      text-shadow: 0 0 20px rgba(0, 230, 17, 0.6);
+    }
+
+    .features-list {
+      list-style: none;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .features-list li {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .features-list .sub-heading {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #d1d5db;
+      margin-top: -4px;
+      margin-bottom: 12px;
+    }
+
+    .features-list .highlight-text {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .promo-banner {
+      border: 1.5px solid #ff0000;
+      color: #ffffff;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 9px 12px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 6px;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    .promo-banner a {
+      color: #ff4d4d;
+      text-decoration: underline;
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      background-color: #00ff1a;
+      color: #000000;
+      font-size: 22px;
+      font-weight: 900;
+      text-decoration: none;
+      padding: 16px 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 255, 26, 0.6);
+      cursor: pointer;
+      border: none;
+      transition: transform 0.1s ease;
+    }
+
+    .cta-button:active {
+      transform: scale(0.98);
+    }
+
+    /* Footer Links */
+    .footer-links {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .footer-links a {
+      color: #888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #00ff1a;
+    }
+
+    /* Modals / Popups */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 10;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #0b141a;
+      border: 1px solid #00ff1a;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      color: #ddd;
+      position: relative;
+      text-align: left;
+    }
+
+    .modal-content h3 {
+      color: #00ff1a;
+      margin-bottom: 10px;
+    }
+
+    .modal-content p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="grid-overlay"></div>
+    
+    <svg class="chart-wave" viewBox="0 0 400 800" preserveAspectRatio="none">
+      <g class="candlestick" style="animation-delay: 0s;">
+        <rect x="60" y="250" width="10" height="150" fill="#00e611" />
+        <line x1="65" y1="200" x2="65" y2="430" stroke="#00e611" stroke-width="2" />
+      </g>
+
+      <g class="candlestick" style="animation-delay: 0.5s;">
+        <rect x="180" y="380" width="10" height="200" fill="#00e611" />
+        <line x1="185" y1="320" x2="185" y2="610" stroke="#00e611" stroke-width="2" />
+      </g>
+
+      <g class="candlestick" style="animation-delay: 1s;">
+        <rect x="300" y="180" width="10" height="280" fill="#00e611" />
+        <line x1="305" y1="120" x2="305" y2="500" stroke="#00e611" stroke-width="2" />
+      </g>
+
+      <path class="wave-path" d="M 0 550 Q 80 300, 160 500 T 320 250 T 400 150" />
+      
+      <text x="280" y="220" fill="#ffffff" opacity="0.1" font-size="32" font-weight="bold">22.10</text>
+      <text x="70" y="680" fill="#ffffff" opacity="0.1" font-size="32" font-weight="bold">10.75</text>
+    </svg>
+  </div>
+
+  <!-- MAIN LANDING PAGE CONTAINER -->
+  <div class="container">
+    <h1 class="main-title">Wolf Academy ™️</h1>
+
+    <div class="logo-container">
+      <div class="logo-circle">
+        <img src="Wolf.jpeg" alt="Logo" class="logo-img">
+      </div>
+    </div>
+
+    <div class="timer" id="countdown">5</div>
+
+    <ul class="features-list">
+      <li>✅ SMC, Gold Forex, BTC Setups 🏆</li>
+      <li class="sub-heading">TODAY'S MARKET RESULTS</li>
+      <li>✅ Smart money Strategies $ tips</li>
+      <li style="margin-top: 6px;">🏆</li>
+      <li>✅ 5/5 EXPERT TRADING INSIGHTS TODAY</li>
+      <li class="highlight-text">Risk Management Guidancess 🏆</li>
+    </ul>
+
+    <div class="promo-banner">
+      📢 PAID PROMOTION: <a href="https://t.me/+JP96Y2n0U8xiZWI1" target="_blank">@Digital Ads Experts</a>
+    </div>
+
+    <a href="https://t.me/+19wqoDdhVOc2NjNl" class="cta-button" target="_blank">
+      JOIN FREE CHANNEL 🚀
+    </a>
+  </div>
+
+  <!-- Footer Info Links -->
+  <div class="footer-links">
+    <a href="javascript:void(0)" onclick="openModal('modal-about')">About Us</a> | 
+    <a href="javascript:void(0)" onclick="openModal('modal-terms')">Terms</a> | 
+    <a href="javascript:void(0)" onclick="openModal('modal-disclaimer')">Disclaimer</a> | 
+    <a href="javascript:void(0)" onclick="openModal('modal-contact')">Contact Us</a>
+  </div>
+
+  <!-- MODALS / POPUPS -->
+  <div class="modal" id="modal-about">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-about')">&times;</span>
+      <h3>About Us</h3>
+      <p>Wolf Academy ™️ provides expert market insights, Smart Money Concept (SMC) setups, and educational tips for Forex, Gold, and BTC traders worldwide.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-terms">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-terms')">&times;</span>
+      <h3>Terms & Conditions</h3>
+      <p>By using our services, you agree that trading carries risks. All predictions and setups shared are for educational purposes only and not financial advice.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-disclaimer">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-disclaimer')">&times;</span>
+      <h3>Disclaimer</h3>
+      <p>Trading Forex, Crypto, and Stocks involves high risk. Never risk money you cannot afford to lose. Past performance does not guarantee future results.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-contact">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-contact')">&times;</span>
+      <h3>Contact Us</h3>
+      <p>For promos, support, or inquiries, reach out to us via Telegram support or through our official promotion partner link above.</p>
+    </div>
+  </div>
+
+  <script>
+    // Countdown timer auto-starts on page load
+    window.onload = function() {
+      startTimer();
+    };
+
+    function startTimer() {
+      let timeLeft = 5;
+      const timerElement = document.getElementById('countdown');
+
+      const interval = setInterval(() => {
+        timeLeft--;
+        if (timeLeft >= 0) {
+          timerElement.textContent = timeLeft;
+        } else {
+          clearInterval(interval);
+        }
+      }, 1000);
+    }
+
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
